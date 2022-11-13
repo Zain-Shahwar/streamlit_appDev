@@ -107,22 +107,22 @@ def main():
                 st.title('Plot')
                 st.info('Line Plot')
                 # fig1 = px.line(df.drop(['class'], axis=1))
-                fig1 = px.line(df, title='Human Arm Activity')
+                fig1 = px.line(df, title='Dataset')
                 st.plotly_chart(fig1, use_container_width=True)
 
-                col1, col2 = st.columns(2)
-                with col1:
-                    ############ Bar graph ############
-                    val_count = df['class'].value_counts()
-                    st.info('Bar Graph:')
-                    fig2 = px.bar(val_count, title='Number of class samples')
-                    st.plotly_chart(fig2, use_container_width=True)
+                # col1, col2 = st.columns(2)
+                # with col1:
+                #     ############ Bar graph ############
+                #     val_count = df['class'].value_counts()
+                #     st.info('Bar Graph:')
+                #     fig2 = px.bar(val_count, title='Number of class samples')
+                #     st.plotly_chart(fig2, use_container_width=True)
                     
-                with col2:
-                    ############ Pie graph ############
-                    st.info("Pie Chart")
-                    fig3 = px.pie(df, names='class', title='Percentage of class samples')
-                    st.plotly_chart(fig3, use_container_width=True)
+                # with col2:
+                #     ############ Pie graph ############
+                #     st.info("Pie Chart")
+                #     fig3 = px.pie(df, names='class', title='Percentage of class samples')
+                #     st.plotly_chart(fig3, use_container_width=True)
                     
     ############################################ Tab 3: Data profiling ############################################
             with tab3:
